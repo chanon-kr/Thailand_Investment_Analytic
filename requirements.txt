@@ -1,0 +1,6 @@
+streamlit
+starfishX
+pythainav
+pandas
+plotly
+sympy
