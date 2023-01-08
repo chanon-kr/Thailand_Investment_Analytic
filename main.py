@@ -1,5 +1,5 @@
 import streamlit as st
-from datetime import datetime
+from datetime import datetime, timedelta
 import plotly.express as px
 from function import get_invest_data, filter_df, format_df
 
@@ -26,8 +26,8 @@ with col1:
     target_name = st.text_input('Name of Target Investment', 'SCC')
 
 with col2:
-    start_date = st.date_input("From",datetime(2022,1,1))
-    end_date = st.date_input("To",datetime(2022,1,31))
+    start_date = st.date_input("From",datetime.now().date() - timedelta(days = 7))
+    end_date = st.date_input("To",datetime.now().date())
 
 if st.button('Show Data') :
     df = get_invest_data(stock_type, target_name, start_date.strftime('%Y-%m-%d'), end_date.strftime('%Y-%m-%d'))
