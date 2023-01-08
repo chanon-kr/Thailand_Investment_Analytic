@@ -23,10 +23,10 @@ with col1:
     ,'Mutual fund'
     # , 'Common Stock'
     ))
-    start_date = st.date_input("From",datetime(2022,1,1))
+    target_name = st.text_input('Name of Target Investment', 'SCC')
 
 with col2:
-    target_name = st.text_input('Name of Target Investment', 'SCC')
+    start_date = st.date_input("From",datetime(2022,1,1))
     end_date = st.date_input("To",datetime(2022,1,31))
 
 if st.button('Show Data') :
