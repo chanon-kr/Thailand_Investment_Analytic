@@ -4,3 +4,4 @@ pythainav
 pandas
 plotly
 sympy
+mplfinance
